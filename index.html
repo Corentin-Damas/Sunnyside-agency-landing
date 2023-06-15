@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <nav class="navigation">
+          <div class="header__logo">
+            <svg class="header__logo">
+              <use xlink:href="images/logo.svg#logo"></use>
+            </svg>
+          </div>
+          <div class="header__nav">
+            <p class="nav__link">About</p>
+            <p class="nav__link">Services</p>
+            <p class="nav__link">Projects</p>
+
+            <a href="#" class="btn-link"
+              ><button class="btn-contact">Contact</button></a
+            >
+          </div>
+        </nav>
+        <h1 class="heading-1 header__slogan">We are creatives</h1>
+
+        <svg class="header__arrow">
+          <use xlink:href="images/icon-arrow-down.svg#arrow-down"></use>
+        </svg>
+      </header>
+      <main>
+        <section class="grid-composition">
+          <div class="grid_comp-text">
+            <h3 class="heading-3">Transform your brand</h3>
+            <p>
+              We are a full-service creative agency specializing in helping
+              brands grow fast. Engage your clients through compelling visuals
+              that do most of the marketing for you.
+            </p>
+            <a href="#" class="btn-link-cta u-yellow"
+              ><button class="btn-cta">Learn More</button></a
+            >
+          </div>
+
+          <div class="grid__comp-2">
+            <img
+              class="grid-img"
+              src="images/desktop/image-transform.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="grid__comp-3">
+            <img
+              class="grid-img"
+              src="images/desktop/image-stand-out.jpg"
+              alt=""
+            />
+          </div>
+          <div class="grid_comp-text">
+            <h3 class="heading-3">Stand out to the right audience</h3>
+            <p>
+              Using a collaborative formula of designers, researchers,
+              photographers, videographers, and copywriters, we’ll build and
+              extend your brand in digital places.
+            </p>
+            <a href="#" class="btn-link-cta u-red"
+              ><button class="btn-cta">Learn More</button></a
+            >
+          </div>
+          <div class="grid_comp-5 u-overlapping">
+            <img
+              class="grid-img"
+              src="images/desktop/image-graphic-design.jpg"
+              alt=""
+            />
+            <div class="grid__text-overimage">
+              <h4 class="heading-4">Graphic Design</h4>
+              <p class="text-overimage">
+                Great design makes you memorable. We deliver artwork that
+                underscores your brand message and captures potential clients’
+                attention.
+              </p>
+            </div>
+          </div>
+          <div class="grid_comp-6 u-overlapping">
+            <img
+              class="grid-img"
+              src="images/desktop/image-photography.jpg"
+              alt=""
+            />
+            <div class="grid__text-overimage">
+              <h4 class="heading-4">Photography</h4>
+              <p class="text-overimage">
+                Increase your credibility by getting the most stunning,
+                high-quality photos that improve your business image.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="testimony">
+          <h5 class="heading-5">CLIENT TESTIMONIALS</h5>
+
+          <div class="testimony__cards-grid">
+            <div class="testimony__card">
+              <img
+                class="card__client-img"
+                src="images/image-emily.jpg"
+                alt=""
+              />
+              <p>
+                We put our trust in Sunnyside and they delivered, making sure
+                our needs were met and deadlines were always hit.
+              </p>
+              <div class="client-detail">
+                <p class="client-name">Emily R.</p>
+                <p class="client-profession">Marketing Director</p>
+              </div>
+            </div>
+
+            <div class="testimony__card">
+              <img
+                class="card__client-img"
+                src="images/image-thomas.jpg"
+                alt=""
+              />
+              <p>
+                Sunnyside’s enthusiasm coupled with their keen interest in our
+                brand’s success made it a satisfying and enjoyable experience.
+              </p>
+              <div class="client-detail">
+                <p class="client-name">Thomas S.</p>
+                <p class="client-profession">Chief Operating Officier</p>
+              </div>
+            </div>
+
+            <div class="testimony__card">
+              <img
+                class="card__client-img"
+                src="images/image-jennie.jpg"
+                alt=""
+              />
+              <p>
+                Incredible end result! Our sales increased over 400% when we
+                worked with Sunnyside. Highly recommended!
+              </p>
+              <div class="client-detail">
+                <p class="client-name">Jennie F.</p>
+                <p class="client-profession">Business Owner</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="gallery">
+          <img src="images/desktop/image-gallery-milkbottles.jpg" alt="" />
+          <img src="images/desktop/image-gallery-orange.jpg" alt="" />
+          <img src="images/desktop/image-gallery-cone.jpg" alt="" />
+          <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="" />
+        </section>
+      </main>
+      <footer class="footer">
+        <svg class="footer__logo">
+          <use xlink:href="images/logo.svg#logo"></use>
+        </svg>
+
+        <div class="footer__links">
+          <p class="foo__link">About</p>
+          <p class="foo__link">Services</p>
+          <p class="foo__link">Projects</p>
+        </div>
+        <div class="footer__socials">
+          <svg class="footer__logo-social">
+            <use xlink:href="images/icon-facebook.svg#facebook"></use>
+          </svg>
+          <svg class="footer__logo-social">
+            <use xlink:href="images/icon-instagram.svg#instagram"></use>
+          </svg>
+          <svg class="footer__logo-social">
+            <use xlink:href="images/icon-twitter.svg#twitter"></use>
+          </svg>
+          <svg class="footer__logo-social">
+            <use xlink:href="images/icon-pinterest.svg#pinterest"></use>
+          </svg>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
