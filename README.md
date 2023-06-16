@@ -15,4 +15,4 @@ Users should be able to:
 
 ### My Result
 
-(screenshots/desktop-preview.jpg)
+[(screenshots/result.jpg)]
