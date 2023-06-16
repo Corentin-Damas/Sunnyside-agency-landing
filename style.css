@@ -20,8 +20,21 @@ The designs were created to the following widths:
 - Mobile: 375px
 - Desktop: 1440px
 
-1000px = 62,5em   Design Breakpoint
+1000px = 62.5em   Design Breakpoint
 @media only screen and (max-width: 62.5em) {}
+
+808px = 50.5em  Design Breakpoint
+@media only screen and (max-width: 50.5em) {}
+
+710px = 44.375em Design break laptop to phone
+@media only screen and (max-width: 44.375em) {}
+
+680px = 42.5em menu change
+@media only screen and (max-width: 42.5em) {}
+
+
+410px = 25.625em Design break laptop to phone
+@media only screen and (max-width: 25.625em) {}
 
   font-family: 'Barlow', sans-serif;
   font-family: 'Fraunces', serif;
@@ -44,6 +57,9 @@ html {
   font-size: 62.5%;
   @media only screen and (max-width: 62.5em) {
     font-size: 55%;
+  }
+  @media only screen and (max-width: 50.5em) {
+    font-size: 50%;
   }
 }
 
@@ -72,6 +88,9 @@ body {
   font-size: 7rem;
   text-transform: uppercase;
   letter-spacing: 0.8rem;
+  @media only screen and (max-width: 25.625em) {
+    font-size: 6rem;
+  }
 }
 
 .heading-3 {
@@ -114,20 +133,6 @@ p {
 }
 
 /*/////////////////////////////////////////////////*/
-/*Utilities*/
-
-.u-yellow {
-  color: var(--p-yellow);
-}
-.u-red {
-  color: var(--p-soft-red);
-}
-
-.u-overlapping {
-  position: relative;
-}
-
-/*/////////////////////////////////////////////////*/
 /*Header*/
 
 .header {
@@ -137,6 +142,7 @@ p {
   height: 100vh;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .navigation {
@@ -146,6 +152,11 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+  @media only screen and (max-width: 42.5em) {
+    height: 15rem;
+    padding: 4% 7%;
+  }
 }
 
 .header__logo {
@@ -159,6 +170,47 @@ p {
   justify-content: center;
   align-items: center;
   gap: 5rem;
+  transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  @media only screen and (max-width: 42.5em) {
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--n-white);
+    width: 80vw;
+    position: absolute;
+    top: 10rem;
+    left: 50%;
+    height: 45vh;
+    transform: translate(0%, -50%) scale(0);
+    z-index: 30;
+    padding-top: 4rem;
+    clip-path: polygon(0 10%, 92% 10%, 100% 0, 100% 100%, 0 100%);
+
+  }
+}
+
+.header__nav p {
+  @media only screen and (max-width: 42.5em) {
+    color: var(--n-dark-blue);
+    font-size: 2.5rem;
+  }
+}
+
+.header__menu-logo {
+  width: 0rem;
+  height: 0rem;
+  transform: scale(1)rotate(0deg);
+  transition: all .1s ease-in-out;
+
+  @media only screen and (max-width: 42.5em) {
+    width: 3rem;
+    height: 3rem;
+    
+  }
+}
+
+.header__menu-logo:active {
+  transform: scale(0.8) rotate(-25deg);
 }
 
 .header__slogan {
@@ -186,6 +238,10 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  @media only screen and (max-width: 44.375em) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
 }
 
 .grid_comp-text {
@@ -198,6 +254,12 @@ p {
   flex-direction: column;
 }
 
+.grid__comp-2 {
+  @media only screen and (max-width: 44.375em) {
+    grid-row: 1/2;
+  }
+}
+
 .grid__text-overimage {
   text-align: center;
   position: absolute;
@@ -205,6 +267,15 @@ p {
   left: 0;
   margin-top: 50%;
   padding-inline: 10%;
+  @media only screen and (max-width: 62.5em) {
+    margin-top: 45%;
+    padding-inline: 8%;
+  }
+
+  @media only screen and (max-width: 44.375em) {
+    margin-top: 50%;
+    padding-inline: 8%;
+  }
 }
 
 .text-overimage {
@@ -219,10 +290,25 @@ p {
   text-align: center;
   height: 90vh;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
   gap: 10vh;
+  padding-top: 10rem;
+
+  @media only screen and (max-width: 62.5em) {
+    padding-top: 3rem;
+    gap: 2rem;
+    height: 50rem;
+  }
+
+  @media only screen and (max-width: 44.375em) {
+    height: 105rem;
+  }
+
+  @media only screen and (max-width: 25.625em) {
+    height: 115rem;
+  }
 }
 
 .testimony__cards-grid {
@@ -230,7 +316,19 @@ p {
   display: grid;
   height: 50%;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
+  gap: 6rem;
+
+  @media only screen and (max-width: 62.5em) {
+    padding-inline: 5%;
+    gap: 6rem;
+  }
+  @media only screen and (max-width: 25.625em) {
+    padding-inline: 10%;
+  }
+
+  @media only screen and (max-width: 44.375em) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .testimony__card {
@@ -238,6 +336,9 @@ p {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  @media only screen and (max-width: 62.5em) {
+    gap: 1rem;
+  }
 }
 
 .card__client-img {
@@ -274,6 +375,9 @@ p {
   flex-direction: column;
   background-color: var(--p-cyan-bg);
   height: 35vh;
+  @media only screen and (max-width: 62.5em) {
+    height: 25rem;
+  }
 }
 
 .footer__logo {
@@ -291,6 +395,11 @@ p {
   margin-top: 4rem;
   margin-bottom: 7rem;
   gap: 8rem;
+
+  @media only screen and (max-width: 62.5em) {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
 }
 
 .foo__link {
@@ -308,6 +417,9 @@ p {
 .footer__logo {
   height: 3rem;
   width: 15rem;
+  @media only screen and (max-width: 44.375em) {
+    width: 16rem;
+  }
 }
 .footer__logo-social {
   height: 3rem;
@@ -336,12 +448,24 @@ p {
   font-weight: 900;
   letter-spacing: 0.07rem;
   cursor: pointer;
+  transform: scale(1);
   transition: all 0.2s;
   background-color: var(--n-white);
+
+  @media only screen and (max-width: 42.5em){
+    margin-top: 0rem;
+    background-color: var(--p-yellow);
+    width: 20rem;
+    height: 8rem;
+  }
 }
 
 .btn-contact:hover {
   transform: scale(1.2);
+}
+
+.btn-contact:active {
+  transform: scale(0.8);
 }
 
 .btn-cta,
@@ -380,4 +504,22 @@ p {
 
 .btn-cta:hover {
   transform: scale(1.2);
+}
+
+/*/////////////////////////////////////////////////*/
+/*Utilities*/
+
+.u-yellow {
+  color: var(--p-yellow);
+}
+.u-red {
+  color: var(--p-soft-red);
+}
+
+.u-overlapping {
+  position: relative;
+}
+
+.u-slide-in {
+  transform: translate(-50%, 0%) scale(1);
 }
