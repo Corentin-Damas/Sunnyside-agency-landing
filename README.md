@@ -15,4 +15,4 @@ Users should be able to:
 
 ### My Result
 
-[(screenshots/result.jpg)]
+![image](screenshots/result.jpg)
